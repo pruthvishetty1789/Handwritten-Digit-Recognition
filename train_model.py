@@ -34,3 +34,25 @@ model.fit(x_train, y_train, batch_size=128, epochs=10, validation_data=(x_test, 
 _, accuracy = model.evaluate(x_test, y_test)
 model.save("handwritten.h5")
 print('Accuracy: {:.2f}%'.format(accuracy * 100))
+
+
+
+# --- Add confusion matrix code here ---
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+
+# Predict classes for the test set
+y_pred = model.predict(x_test)
+y_pred_classes = np.argmax(y_pred, axis=1)
+y_true = np.argmax(y_test, axis=1)
+
+# Compute the confusion matrix
+cm = confusion_matrix(y_true, y_pred_classes)
+
+# Plot the confusion matrix
+plt.figure(figsize=(10, 8))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.title('Confusion Matrix')
+plt.show()
