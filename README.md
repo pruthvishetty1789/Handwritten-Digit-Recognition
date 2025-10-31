@@ -9,8 +9,7 @@ It uses a **TensorFlow CNN model (`handwritten.h5`)** trained on the **MNIST dat
 
 ✅ Draw any digit (0–9) on an interactive canvas  
 ✅ Predict the digit instantly using a trained deep learning model  
-✅ Enter the correct digit to record prediction results  
-✅ View the **accuracy of predictions** based on your drawings  
+✅ Enter the correct digit to record prediction results   
 ✅ Clear all results with one click  
 
 ---
