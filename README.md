@@ -41,7 +41,7 @@ git clone https://github.com/pruthvishetty1789/handwritten-digit-recognition.git
 cd handwritten-digit-recognition
 
 
- 2. Create and activate a virtual environment
+### 2. Create and activate a virtual environment
 On Windows
 python -m venv env
 env\Scripts\activate
@@ -50,10 +50,10 @@ On macOS / Linux
 python3 -m venv env
 source env/bin/activate
 
- 3. Install dependencies
+### 3. Install dependencies
 pip install tensorflow pillow numpy pandas matplotlib streamlit streamlit-drawable-canvas
 
- 4.Run
+### 4.Run
 streamlit run app.py
 
 
